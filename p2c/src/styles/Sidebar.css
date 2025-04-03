@@ -1,0 +1,111 @@
+/* 🌟 Sidebar.css - Dark Mode with Neon Glow */
+:root {
+    --sidebar-bg: #121212;
+    --sidebar-border: #1f1f1f;
+    --text-color: #e0e0e0;
+    --hover-bg: #1e1e2f;
+    --active-bg: #282a36;
+    --accent-color: #ff3b6c;
+    --icon-glow: rgba(255, 59, 108, 0.6);
+    --shadow-dark: rgba(255, 255, 255, 0.08);
+}
+
+/* 📂 Sidebar Container */
+.sidebar {
+    position: fixed;
+    top: 80px; /* Adjusted for header */
+    left: 0;
+    width: 280px;
+    height: calc(100vh - 80px); /* Fill remaining height */
+    background: var(--sidebar-bg);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 2px 0 10px var(--shadow-dark);
+    border-right: 2px solid var(--sidebar-border);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+    animation: slideIn 0.4s ease-in-out;
+}
+
+/* 📌 Navigation Item */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 24px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    cursor: pointer;
+}
+
+/* 🔥 Hover & Active Effects */
+.nav-item:hover {
+    background: var(--hover-bg);
+    transform: scale(1.05);
+}
+
+.nav-item.active {
+    background: var(--active-bg);
+    font-weight: bold;
+    border-left: 4px solid var(--accent-color);
+}
+
+/* 🚀 Sidebar Icons */
+.icon {
+    font-size: 1.6rem;
+    transition: transform 0.2s ease-in-out, text-shadow 0.3s;
+}
+
+/* 🔥 Icon Glow on Hover */
+.nav-item:hover .icon {
+    text-shadow: 0 0 12px var(--icon-glow);
+    transform: scale(1.1);
+}
+
+/* 🌀 Sidebar Fade-In Effect */
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 📱 Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .nav-item {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .icon {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 160px;
+    }
+    
+    .nav-item {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    
+    .icon {
+        font-size: 1.2rem;
+    }
+}

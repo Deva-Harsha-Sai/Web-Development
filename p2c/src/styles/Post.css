@@ -1,0 +1,305 @@
+/* 🌙 Post.css - Ultra-Stylish Supercool Dark Mode */
+:root {
+    --bg-dark: #131417;
+    --post-dark: #1e1f26;
+    --text-dark: #f4f4f9;
+    --primary-dark: #6a5acd;
+    --primary-hover: #5745b1;
+    --border-dark: #333;
+    --danger: #d32f2f;
+    --danger-hover: #b71c1c;
+    --success: #007bff;
+    --success-hover: #0056b3;
+    --highlight: #ff9800;
+}
+
+/* 📝 Post Container */
+.post {
+    background: var(--post-dark);
+    color: var(--text-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.post:hover {
+    background: #22232a;
+    transform: scale(1.03);
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.08);
+}
+
+/* 📝 Post Title */
+.post h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* 📰 Post Content */
+.post p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+/* 🎬 Media Attachments */
+.post-media {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 12px;
+    transition: transform 0.3s ease;
+}
+
+.post-media:hover {
+    transform: scale(1.02);
+}
+
+/* 🔗 Post Links */
+.post-link {
+    display: inline-block;
+    color: var(--success);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 12px;
+    transition: color 0.3s ease;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+    color: var(--success-hover);
+}
+
+/* 🔘 Post Actions */
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* 👍 Like & 💬 Comment Buttons */
+.post-actions button {
+    background: var(--border-dark);
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.post-actions button:hover {
+    background: #444;
+    transform: scale(1.07);
+}
+
+/* ❤️ Liked State */
+.liked {
+    background: #ff4757 !important;
+    color: white !important;
+}
+
+/* 🗑️ Delete Button */
+.delete-btn {
+    background: var(--danger);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: var(--danger-hover);
+}
+
+/* 💬 Comments Section */
+.comments {
+    margin-top: 20px;
+    padding: 16px;
+    background: #1a1b22;
+    border-radius: 12px;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 💬 Individual Comment Box */
+.comment-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: #22242a;
+    border-radius: 10px;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease;
+    margin-bottom: 12px;
+}
+
+/* 👤 User Avatar */
+.comment-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #444;
+}
+
+/* 🗨️ Comment Content */
+.comment-content {
+    flex: 1;
+}
+
+.comment-content strong {
+    color: var(--primary-dark);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.comment-content p {
+    font-size: 15px;
+    color: #ddd;
+    margin-top: 4px;
+    background: #292b33;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* 🗑️ Delete & ↩️ Reply Buttons */
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.comment-delete-btn,
+.comment-reply-btn {
+    background: var(--danger);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.comment-delete-btn:hover {
+    background: var(--danger-hover);
+    transform: scale(1.05);
+}
+
+.comment-reply-btn {
+    background: var(--success);
+}
+
+.comment-reply-btn:hover {
+    background: var(--success-hover);
+    transform: scale(1.05);
+}
+
+/* ✏️ Comment Input Section */
+.comment-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 12px;
+    background: #1c1e24;
+    border-radius: 10px;
+    border: 1px solid var(--border-dark);
+}
+
+/* 🔹 Comment Input */
+.comment-input-container input {
+    flex: 1;
+    padding: 12px;
+    background: #22242a;
+    border: 1px solid #3a3d4a;
+    border-radius: 10px;
+    color: var(--text-dark);
+    font-size: 15px;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+.comment-input-container input:focus {
+    border-color: var(--primary-dark);
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+/* 📨 Comment Send Button */
+.comment-send-btn {
+    background: var(--success);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.comment-send-btn:hover {
+    background: var(--success-hover);
+    transform: scale(1.05);
+}
+
+/* 📜 Comment List (Scrollable for Many Comments) */
+.comment-list {
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* ✨ Smooth Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .comment-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .comment-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .comment-content p {
+        font-size: 14px;
+    }
+
+    .comment-input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .comment-input-container input {
+        width: 100%;
+    }
+
+    .comment-send-btn {
+        width: 100%;
+    }
+}

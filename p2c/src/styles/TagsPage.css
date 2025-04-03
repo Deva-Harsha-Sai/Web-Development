@@ -1,0 +1,173 @@
+/* 🌟 TagsPage.css - Dark Mode with Smooth UI */
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #ff9800;
+  --secondary-color: #1f1f1f;
+  --button-hover: #ff5722;
+  --tag-bg: #2a2a2a;
+  --border-color: #333;
+}
+
+/* 📌 Tags Page Container */
+.tags-container {
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+/* 🏷️ Tags List */
+.tags-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: var(--tag-bg);
+  border-radius: 8px;
+}
+
+/* 🔹 Tag Buttons */
+.tags-list button {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 6px;
+}
+
+/* 🚀 Hover & Active Effects */
+.tags-list button:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.active-tag {
+  background: var(--primary-color) !important;
+  font-weight: bold;
+}
+
+/* 📂 Tag Section */
+.tag-section {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+/* ✏️ Create Post Form */
+.create-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--tag-bg);
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* 📌 Form Fields */
+.create-post-form input,
+.create-post-form textarea,
+.create-post-form select {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+/* ✨ Focus Effect */
+.create-post-form input:focus,
+.create-post-form textarea:focus,
+.create-post-form select:focus {
+  border: 1px solid var(--primary-color);
+  outline: none;
+}
+
+/* 🚀 Form Buttons */
+.create-post-form button {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* 🔥 Button Hover */
+.create-post-form button:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
+}
+
+/* 🛑 Admin Zone Button */
+.admin-zone-btn {
+  background: #d32f2f;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* 🚨 Admin Button Hover */
+.admin-zone-btn:hover {
+  background: #b71c1c;
+  transform: scale(1.05);
+}
+
+/* 📌 Posts List */
+.posts-list {
+  margin-top: 20px;
+  padding: 10px;
+  background: var(--tag-bg);
+  border-radius: 8px;
+}
+
+/* 🗑️ Delete Button */
+.delete-btn {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* 🔥 Delete Button Hover */
+.delete-btn:hover {
+  background: #b71c1c;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .tags-list {
+    flex-direction: column;
+  }
+
+  .create-post-form {
+    padding: 12px;
+  }
+
+  .create-post-form input,
+  .create-post-form textarea {
+    padding: 10px;
+  }
+
+  .tags-list button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

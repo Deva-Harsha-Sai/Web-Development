@@ -1,0 +1,124 @@
+:root {
+    --header-bg: #0d0d12;
+    --header-text: #e0e0e0;
+    --header-hover: #6a5acd;
+    --border-dark: rgba(255, 255, 255, 0.12);
+    --shadow-dark: rgba(255, 255, 255, 0.1);
+}
+
+/* 📌 Header Bar */
+.header {
+    display: flex;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 12px 25px;
+    height: 70px;
+    box-shadow: 0px 4px 10px var(--shadow-dark);
+    border-bottom: 1px solid var(--border-dark);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* 🎨 Logo Styling */
+.logo a {
+    text-decoration: none;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: var(--header-text);
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.logo a:hover {
+    color: var(--header-hover);
+    text-shadow: 0px 0px 10px var(--header-hover);
+}
+
+/* 🔥 Profile Section */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    max-width: 250px; /* Prevents stretching */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 🔥 Profile */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+/* 🔘 Profile Picture */
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    flex-shrink: 0; /* Prevents it from shrinking */
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 12px rgba(106, 90, 205, 0.5);
+}
+
+/* 👤 Default Profile Icon */
+.default-profile {
+    color: var(--header-text);
+    font-size: 24px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.default-profile:hover {
+    color: var(--header-hover);
+    transform: scale(1.1);
+}
+
+/* 🔥 Header Hover Glow Effect */
+.header:hover {
+    box-shadow: 0px 4px 18px rgba(106, 90, 205, 0.3);
+}
+
+/* 📱 Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 10px 15px;
+        height: 60px;
+    }
+
+    .logo a {
+        font-size: 1.6rem;
+    }
+
+    .profile-container {
+        max-width: 150px;
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    .default-profile {
+        font-size: 20px;
+    }
+}

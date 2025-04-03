@@ -1,0 +1,177 @@
+/* 🌟 Profile.css - Dark Mode with Neon Glow */
+:root {
+    --bg-dark: #0b0c10;
+    --profile-card: #1f2833;
+    --profile-border: #45a29e;
+    --text-dark: #f8f8f8;
+    --tag-bg: #6a5acd;
+    --tag-hover: #5146d9;
+    --button-bg: #ff3b6c;
+    --button-hover: #ff1744;
+    --shadow-dark: rgba(255, 255, 255, 0.1);
+}
+
+/* 🌌 Full-Screen Background */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0d0d1d, #1a1a2e);
+    padding: 20px;
+}
+
+/* 🏷️ Profile Card */
+.profile-card {
+    background: var(--profile-card);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0px 6px 18px var(--shadow-dark);
+    width: 380px;
+    text-align: center;
+    border: 2px solid var(--profile-border);
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile-card:hover {
+    box-shadow: 0px 8px 24px rgba(255, 255, 255, 0.12);
+    transform: scale(1.02);
+}
+
+/* 🎭 Profile Picture */
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid var(--button-bg);
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* 🎤 Profile Text */
+.profile-card h2 {
+    margin-top: 12px;
+    color: var(--text-dark);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.profile-card p {
+    color: rgba(248, 248, 248, 0.7);
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* 📌 Tags Section */
+h3 {
+    margin-top: 22px;
+    color: var(--text-dark);
+    font-size: 1.3rem;
+}
+
+/* 🔹 Tags */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.tag {
+    background: var(--tag-bg);
+    color: white;
+    padding: 7px 14px;
+    margin: 6px;
+    border-radius: 22px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background: var(--tag-hover);
+    transform: scale(1.1);
+}
+
+/* 🔘 No Tags Message */
+.no-tags {
+    color: rgba(248, 248, 248, 0.5);
+    font-style: italic;
+    margin-top: 6px;
+}
+
+/* 🚀 Buttons */
+button {
+    margin-top: 18px;
+    padding: 14px;
+    width: 100%;
+    background: var(--button-bg);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: var(--button-hover);
+    transform: scale(1.07);
+}
+
+/* 💡 Neon Glow on Hover */
+.profile-card,
+button,
+.tag {
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✨ Smooth Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .profile-card {
+        width: 90%;
+        padding: 24px;
+    }
+
+    .profile-pic {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profile-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .profile-card p {
+        font-size: 0.95rem;
+    }
+
+    .tag {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

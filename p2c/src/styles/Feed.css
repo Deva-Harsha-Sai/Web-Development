@@ -1,0 +1,246 @@
+/* 🌙 Feed.css - Ultra-Stylish & Supercool Dark Mode */
+:root {
+    --bg-dark: #0f0f12;
+    --post-dark: #1a1b22;
+    --text-dark: #e5e5f1;
+    --primary-dark: #6a5acd;
+    --primary-hover: #5745b1;
+    --border-dark: #2a2a38;
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 📜 Feed Container */
+.feed-container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
+/* 🏷️ Page Title */
+h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+/* 📝 Post Card */
+.post {
+    border: 1px solid var(--border-dark);
+    padding: 20px;
+    margin: 15px 0;
+    background: var(--post-dark);
+    border-radius: 12px;
+    box-shadow: 0 5px 25px var(--shadow-dark);
+    transition: all 0.3s ease, transform 0.2s ease;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.post:hover {
+    transform: scale(1.02);
+}
+
+/* 📷 Post Image */
+.post img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 📝 Post Content */
+.post-content {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 🔘 Post Actions */
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* 👍 Like & 💬 Comment Buttons */
+.post-actions button {
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--primary-dark);
+    color: white;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.post-actions button:hover {
+    background: var(--primary-hover);
+    transform: scale(1.07);
+    box-shadow: 0 0 15px rgba(106, 90, 205, 0.3);
+}
+
+/* 💬 Comments Section */
+.comment-section {
+    margin-top: 20px;
+    padding: 16px;
+    background: #1c1d23;
+    border-radius: 12px;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔹 Individual Comment */
+.comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: #22242a;
+    border-radius: 10px;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease;
+    margin-bottom: 12px;
+}
+
+/* 👤 User Avatar */
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #333;
+}
+
+/* 🗨️ Comment Content */
+.comment-content {
+    flex: 1;
+}
+
+.comment-content strong {
+    color: var(--primary-dark);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.comment-content p {
+    font-size: 15px;
+    color: #ddd;
+    margin-top: 4px;
+    background: #292b33;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* 🗑️ Delete Button */
+.comment-delete-btn {
+    background: var(--danger);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.comment-delete-btn:hover {
+    background: var(--danger-hover);
+    transform: scale(1.05);
+}
+
+/* ✏️ Comment Input Section */
+.comment-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* 🔹 Comment Input */
+.comment-input-container input {
+    flex: 1;
+    padding: 12px;
+    background: #22242a;
+    border: 1px solid #3a3d4a;
+    border-radius: 10px;
+    color: var(--text-dark);
+    font-size: 15px;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+.comment-input-container input:focus {
+    border-color: var(--primary-dark);
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+/* 📨 Comment Submit Button */
+.comment-input-container button {
+    background: var(--primary-dark);
+    color: white;
+    border: none;
+    padding: 13px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.comment-input-container button:hover {
+    background: var(--primary-hover);
+    padding: 13px 16px;
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+/* 📱 Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .comment {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .comment-avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .comment-content p {
+        font-size: 14px;
+    }
+
+    .comment-input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .comment-input-container input {
+        width: 100%;
+    }
+
+    .comment-input-container button {
+        width: 100%;
+    }
+}

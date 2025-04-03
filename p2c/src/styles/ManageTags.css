@@ -1,0 +1,166 @@
+/* 🌙 Tag.css - Ultra-Stylish Supercool Dark Mode */
+:root {
+  --bg-dark: #131417;
+  --box-dark: #1e1f26;
+  --text-dark: #f4f4f9;
+  --primary-dark: #6a5acd;
+  --primary-hover: #5745b1;
+  --border-dark: #333;
+  --success: #2ecc71;
+  --warning: #f39c12;
+  --highlight: #3498db;
+}
+
+/* 🏷️ Tags Container */
+.tags-container {
+  background: var(--box-dark);
+  color: var(--text-dark);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* 🔍 Search Box */
+.search-box {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-dark);
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-dark);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.search-box:focus {
+  border-color: var(--primary-dark);
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 🔖 Tag List */
+.tag-list {
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px;
+  background: var(--border-dark);
+  border-radius: 8px;
+}
+
+/* 🏷️ Individual Tag */
+.tag {
+  padding: 8px 14px;
+  border-radius: 18px;
+  background: #3a3b47;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tag:hover {
+  background: #525365;
+  transform: scale(1.05);
+}
+
+/* ✅ Selected Tag */
+.selected {
+  background: var(--highlight) !important;
+  color: white;
+  font-weight: bold;
+  transform: scale(1.08);
+}
+
+/* ➕ Create Tag Section */
+.create-tag {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+/* 📝 Input for Creating Tags */
+.create-tag input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-dark);
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-dark);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.create-tag input:focus {
+  border-color: var(--primary-dark);
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ➕ Add Tag Button */
+.add-tag-btn {
+  padding: 10px 14px;
+  background: var(--success);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-tag-btn:hover {
+  background: #27ae60;
+  transform: scale(1.05);
+}
+
+/* 💾 Save Button */
+.save-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--warning);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.save-btn:hover {
+  background: #e67e22;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .tags-container {
+      max-width: 90%;
+      padding: 18px;
+  }
+
+  .tag {
+      font-size: 14px;
+      padding: 7px 12px;
+  }
+
+  .create-tag input {
+      font-size: 14px;
+      padding: 9px;
+  }
+
+  .add-tag-btn, .save-btn {
+      font-size: 14px;
+      padding: 10px;
+  }
+}

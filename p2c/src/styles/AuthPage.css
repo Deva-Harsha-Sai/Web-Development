@@ -1,0 +1,128 @@
+/* 🌙 AuthPage.css - Ultra-Modern Dark Mode Authentication Page */
+:root {
+    --bg-dark: #0f0f10;
+    --box-dark: rgba(25, 25, 35, 0.95);
+    --text-dark: #e5e5e5;
+    --primary-dark: #6a5acd;
+    --primary-hover: #5745b1;
+    --border-dark: #3a3a4a;
+    --shadow-dark: rgba(0, 0, 0, 0.6);
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 🟣 Auth Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bg-dark);
+    padding: 20px;
+}
+
+/* 🔳 Glassmorphic Authentication Box */
+.auth-box {
+    background: var(--box-dark);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px var(--shadow-dark);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.auth-box h2 {
+    color: var(--text-dark);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* 🎯 Input Fields */
+.auth-box input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid var(--border-dark);
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.auth-box input:focus {
+    border-color: var(--primary-dark);
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🔘 Auth Button */
+.auth-box button {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-dark);
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.auth-box button:hover {
+    background: var(--primary-hover);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(106, 90, 205, 0.4);
+}
+
+/* 🔄 Toggle Text */
+.toggle-text {
+    margin-top: 15px;
+    color: var(--primary-dark);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.toggle-text:hover {
+    text-decoration: underline;
+    color: var(--primary-hover);
+}
+
+/* 📱 Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    .auth-box {
+        padding: 25px;
+        width: 90%;
+    }
+
+    .auth-box h2 {
+        font-size: 22px;
+    }
+
+    .auth-box input {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .auth-box button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .toggle-text {
+        font-size: 14px;
+    }
+}
